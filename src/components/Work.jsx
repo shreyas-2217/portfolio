@@ -35,6 +35,12 @@ const themes = {
     glow: "rgba(253, 230, 138, 0.55)",
     motif: "chat",
   },
+  macrolens: {
+    background:
+      "linear-gradient(138deg, #241a0b 0%, #4a6b1f 45%, #a6cf70 100%)",
+    glow: "rgba(232, 213, 163, 0.5)",
+    motif: "lens",
+  },
 };
 
 const tileSizes = {
@@ -83,6 +89,20 @@ function Motif({ type }) {
     );
   }
 
+  if (type === "lens") {
+    return (
+      <div
+        className="absolute -right-10 -top-8 opacity-40 pointer-events-none"
+        aria-hidden="true"
+      >
+        <span className="absolute left-1/2 top-1/2 size-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/40" />
+        <span className="absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/30" />
+        <span className="absolute left-1/2 top-1/2 size-7 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/50" />
+        <span className="absolute left-1/2 top-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/60" />
+      </div>
+    );
+  }
+
   if (type === "chat") {
     return (
       <div className="absolute -right-4 top-24 space-y-2 opacity-40 pointer-events-none" aria-hidden="true">
@@ -114,8 +134,13 @@ function Tile({ project }) {
   const theme = themes[project.id] || themes.spendlytics;
   const featured = project.size === "featured";
   const span = tileSizes[project.size] ?? tileSizes.compact;
-  const primary = project.links?.[0];
-  const secondary = project.links?.[1];
+  // A link whose href is still an unfilled placeholder (e.g. the deploy URL)
+  // is dropped rather than rendered as a dead button.
+  const links = (project.links ?? []).filter(
+    (link) => link?.href && !/^[A-Z0-9_]+$/.test(link.href),
+  );
+  const primary = links[0];
+  const secondary = links[1];
 
   return (
     <TiltCard className="h-full">
@@ -250,7 +275,7 @@ export default function Work() {
             label="Selected work"
             title="My"
             accent="work"
-            description="Five projects at the intersection of data, product, and AI. Each one starts with a real friction point."
+            description="Six projects at the intersection of data, product, and AI. Each one starts with a real friction point."
           />
         </Reveal>
 

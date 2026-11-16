@@ -85,8 +85,38 @@ export const projects = [
     ],
   },
   {
-    id: "meridian",
+    id: "macrolens",
     number: "03",
+    title: "MacroLens",
+    subtitle: "Meal photo → nutrition analytics",
+    discipline: "Computer Vision + Data",
+    year: "2026",
+    accent: "olive",
+    size: "featured",
+    summary:
+      "A calorie counter that admits what a photo can't know. A pretrained model names the dish, the interface shows ranges instead of fake-precise numbers, and every log becomes an eating pattern you can act on.",
+    highlights: [
+      "Pretrained Food-101 classifier, no training",
+      "88.9% top-1 / 97.5% top-3 on the Food-101 benchmark",
+      "Honest ±20% ranges + a correction path",
+    ],
+    stack: ["PyTorch", "FastAPI", "pandas", "DuckDB", "Python"],
+    links: [
+      {
+        label: "Live app",
+        href: "MACROLENS_APP_URL",
+        type: "live",
+      },
+      {
+        label: "Code",
+        href: "https://github.com/shreyas-2217/macrolens",
+        type: "code",
+      },
+    ],
+  },
+  {
+    id: "meridian",
+    number: "04",
     title: "Meridian",
     subtitle: "Global meeting finder",
     discipline: "Product analytics",
@@ -111,7 +141,7 @@ export const projects = [
   },
   {
     id: "food-delivery",
-    number: "04",
+    number: "05",
     title: "Food Delivery",
     subtitle: "Sales analytics dashboard",
     discipline: "Data analytics",
@@ -141,7 +171,7 @@ export const projects = [
   },
   {
     id: "scoutx",
-    number: "05",
+    number: "06",
     title: "ScoutX",
     subtitle: "Sports talent discovery",
     discipline: "Product + AI",
