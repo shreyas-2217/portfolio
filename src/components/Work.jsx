@@ -275,7 +275,7 @@ export default function Work() {
             label="Selected work"
             title="My"
             accent="work"
-            description="Six projects at the intersection of data, product, and AI. Each one starts with a real friction point."
+            description="Seven projects at the intersection of data, product, and AI. Each one starts with a real friction point."
           />
         </Reveal>
 

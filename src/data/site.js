@@ -147,7 +147,7 @@ export const projects = [
     discipline: "Data analytics",
     year: "2026",
     accent: "orange",
-    size: "compact",
+    size: "wide",
     summary:
       "An interactive dashboard that turns delivery orders into city, dish, restaurant, and revenue trends — built for the next decision.",
     highlights: [
@@ -177,7 +177,7 @@ export const projects = [
     discipline: "Product + AI",
     year: "2026",
     accent: "lilac",
-    size: "compact",
+    size: "wide",
     summary:
       "Contributed to a cross-platform talent discovery product connecting players and coaches through highlight videos, trial listings, and conversational search.",
     highlights: [
@@ -190,6 +190,36 @@ export const projects = [
       {
         label: "Code",
         href: "https://github.com/shreyas-2217/ScoutX",
+        type: "code",
+      },
+    ],
+  },
+  {
+    id: "plotline",
+    number: "07",
+    title: "Plotline",
+    subtitle: "A story engine for spreadsheets",
+    discipline: "Data + narrative",
+    year: "2026",
+    accent: "cobalt",
+    size: "wide",
+    summary:
+      "Drop a CSV or Excel file and get a scroll-driven data story where every claim shows its receipt. The engine computes each number into a stats ledger; the narrative can only cite stats that exist — and the story always ends with what the data can't tell you.",
+    highlights: [
+      "Claims are verified against a stats ledger before render",
+      "Click any sentence → a receipt with the exact computation",
+      "Stdlib-only: CSV + XLSX parsing with zero dependencies",
+    ],
+    stack: ["Python", "Vanilla JS", "SVG", "Vercel"],
+    links: [
+      {
+        label: "Live app",
+        href: "https://plotline-shreyasmelligeri25-7316.vercel.app",
+        type: "live",
+      },
+      {
+        label: "Code",
+        href: "https://github.com/shreyas-2217/plotline",
         type: "code",
       },
     ],
