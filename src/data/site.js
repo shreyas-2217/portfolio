@@ -97,14 +97,14 @@ export const projects = [
       "A calorie counter that admits what a photo can't know. A pretrained model names the dish, the interface shows ranges instead of fake-precise numbers, and every log becomes an eating pattern you can act on.",
     highlights: [
       "Pretrained Food-101 classifier, no training",
-      "88.9% top-1 / 97.5% top-3 on the Food-101 benchmark",
+      "88.9% top-1 / 97.5% top-3 on an 81-image evaluation slice",
       "Honest ±20% ranges + a correction path",
     ],
     stack: ["PyTorch", "FastAPI", "pandas", "DuckDB", "Python"],
     links: [
       {
         label: "Live app",
-        href: "MACROLENS_APP_URL",
+        href: "https://macrolens-shreyasmelligeri25-7316.vercel.app",
         type: "live",
       },
       {
